@@ -4,7 +4,8 @@ const mongoose = require('mongoose');
 const login = require('./routes/login');
 const register = require('./routes/register');
 const quiz = require('./routes/quiz');
-const choicequiz = require('./routes/choicequiz00');
+// const choicequiz = require('./routes/choicequiz');
+const getquiz = require('./routes/get')
 const server = require('http').Server(app);
 const cors = require('cors');
 require('dotenv/config');
@@ -35,7 +36,8 @@ app.get('/',(req,res) =>{
 app.use('/register', register);
 app.use('/login', login);
 app.use('/quiz', quiz);
-app.use('/choicequiz', choicequiz);
+// app.use('/choicequiz', choicequiz);
+app.use('/get', getquiz);
 
 app.listen(4000, () => console.log('Server is listening on port 4000'));
 
