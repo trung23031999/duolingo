@@ -1,6 +1,6 @@
 const express = require('express');
 const router = express.Router();
-const Img = require('../models/imagequiz');
+const Img = require('../models/imageQuiz');
 
 //Post quiz
 router.post('/', async(req, res) =>{

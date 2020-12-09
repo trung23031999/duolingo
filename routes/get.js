@@ -1,6 +1,6 @@
 const express = require('express');
 const router = express.Router();
-const QuizList = require('../models/imagequiz');
+const QuizList = require('../models/imageQuiz');
 
 //Get quiz
 router.get('/:topic/:lesson', async(req, res)=>{
@@ -8,7 +8,7 @@ router.get('/:topic/:lesson', async(req, res)=>{
     console.log(topic);
     var lesson = req.params.lesson;
     console.log(lesson);
-    var result = await QuizList.find({topic : topic});
+    var result = await QuizList.find({topic : topic, lesson : lesson});
     res.json(result);
 });
 
