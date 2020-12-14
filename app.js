@@ -3,11 +3,11 @@ const app = express();
 const mongoose = require('mongoose');
 const login = require('./routes/login');
 const register = require('./routes/register');
-const imgquiz = require('./routes/imageQuiz');
-const choicequiz = require('./routes/choiceQuiz');
-const inputquiz = require('./routes/inputQuiz')
-// const choicequiz = require('./routes/choicequiz');
-const getquiz = require('./routes/get')
+// const imgquiz = require('./routes/imageQuiz');
+// const choicequiz = require('./routes/choiceQuiz');
+// const inputquiz = require('./routes/inputQuiz');
+const getquiz = require('./routes/get');
+const getlearn = require('./routes/getUserLearn');
 const server = require('http').Server(app);
 const cors = require('cors');
 require('dotenv/config');
@@ -27,6 +27,8 @@ mongoose.connection.once('open', () => {
     console.log('Connected to MongoDB');
 });
 
+mongoose.set('useFindAndModify', false);
+
 app.use(express.static('uploads'));
 app.use(cors());
 app.use(express.json());
@@ -37,10 +39,11 @@ app.get('/',(req,res) =>{
 //Routes Middlewares
 app.use('/register', register);
 app.use('/login', login);
-app.use('/imgquiz', imgquiz);
-app.use('/choicequiz', choicequiz);
-app.use('/inputquiz', inputquiz);
 app.use('/get', getquiz);
+app.use('/getlearn', getlearn);
+// app.use('/imgquiz', imgquiz);
+// app.use('/choicequiz', choicequiz);
+// app.use('/inputquiz', inputquiz);
 
 app.listen(4000, () => console.log('Server is listening on port 4000'));
 

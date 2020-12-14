@@ -1,6 +1,7 @@
 const express = require('express');
 const router = express.Router();
 const User = require('../models/user');
+const Learn = require('../models/userLearn')
 const bcrypt = require('bcryptjs');
 const {registerValidation, loginValidation} = require('../validation');
 const multer = require('multer');
@@ -8,7 +9,6 @@ const fileroot = require('app-root-path');
 
 //Register
 router.post('/', async(req, res) =>{
-    console.log("abca0");
     //Validate data
     //check syntax login
     const {error} = registerValidation(req.body);
@@ -22,6 +22,11 @@ router.post('/', async(req, res) =>{
     const salt = await bcrypt.genSalt(8);
     const hashedPassword = await bcrypt.hash(req.body.password, salt);
 
+    //Create new Learn process
+    const learnProcess = new Learn({
+        username : req.body.username,
+    });
+
     //Create new User
     const user = new User({
         username : req.body.username,
@@ -30,7 +35,8 @@ router.post('/', async(req, res) =>{
     });
     try {
         const saveUser = await user.save();
-        res.json(saveUser).send(res.body);
+        const saveLearn = await learnProcess.save();
+        res.json(saveLearn).send(res.body);
     } catch (error) {
         res.json({message : error})
     }

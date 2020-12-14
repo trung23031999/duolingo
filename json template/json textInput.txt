@@ -1,0 +1,8 @@
+            "topic" : "basic1",
+            "level" : "1",
+            "type": "textInput",
+            "id": 2,
+            "score": 10,
+            "title": "We have rice",
+            "header": "Viết lại bằng tiếng việt",
+            "answers": ["Chúng có gạo", "Chúng tôi có cơm"]

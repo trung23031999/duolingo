@@ -1,0 +1,26 @@
+            "topic" : "basic1",
+            "level" : "1",
+            "id": 1,
+            "type": "imageChoice",
+            "score": 10,
+            "title": "Đâu là tiếng anh",
+            "answers": [
+                {
+                    "image": "/questions/imgChoice/cake.svg",
+                    "title": "Cake",
+                    "isCorrect": false,
+                    "tts": "questions/imgChoice/cake.mp3"
+                },
+                {
+                    "image": "/questions/imgChoice/tea.svg",
+                    "title": "Tea",
+                    "isCorrect": false,
+                    "tts": "questions/imgChoice/tea.mp3"
+                },
+                {
+                    "image": "/questions/imgChoice/english.svg",
+                    "title": "English",
+                    "isCorrect": true,
+                    "tts": "/questions/imgChoice/english.mp3"
+                }
+            ]
