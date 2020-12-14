@@ -1,8 +1,11 @@
             "topic" : "basic1",
             "level" : "1",
             "type": "textInput",
-            "id": 2,
+            "id": "2",
             "score": 10,
-            "title": "We have rice",
-            "header": "Viết lại bằng tiếng việt",
-            "answers": ["Chúng có gạo", "Chúng tôi có cơm"]
+            "image": "/questions/imgChoice/person.svg",
+            "header": "We have rice",
+            "placeholder": "Nhập bằng Tiếng Việt", 
+            "title": "Viết lại bằng Tiếng Việt",
+            "correctAnswer": "Chúng tôi có gạo",
+            "answers": ["Chúng tôi có gạo", "Chúng tôi có cơm"]
