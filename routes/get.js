@@ -6,7 +6,7 @@ const verify = require('./verifyToken');
 const jsonMerger = require("json-merger")
 
 //Get quiz
-router.post('/', async(req, res)=>{
+router.post('/', verify, async(req, res)=>{
     var topic = req.body.topic;
     var level = req.body.level;
     var questions = await QuizList.find({topic : topic, level : level});
