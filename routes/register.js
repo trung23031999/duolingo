@@ -1,7 +1,8 @@
 const express = require('express');
 const router = express.Router();
 const User = require('../models/user');
-const Learn = require('../models/userLearn')
+const Learn = require('../models/userLearn');
+const Score = require('../models/score');
 const bcrypt = require('bcryptjs');
 const {registerValidation, loginValidation} = require('../validation');
 const multer = require('multer');
@@ -27,6 +28,10 @@ router.post('/', async(req, res) =>{
         username : req.body.username,
     });
 
+    const score = new Score({
+        username : req.body.username,
+    })
+
     //Create new User
     const user = new User({
         username : req.body.username,
@@ -36,6 +41,7 @@ router.post('/', async(req, res) =>{
     try {
         const saveUser = await user.save();
         const saveLearn = await learnProcess.save();
+        const saveScore = await score.save();
         res.json(saveLearn).send(res.body);
     } catch (error) {
         res.json({message : error})

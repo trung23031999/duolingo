@@ -56,8 +56,8 @@ const fix1 = [
         row : 4,
     },
     {
-        topic : "Food",
-        title : "food",
+        topic : "Cơ bản 7",
+        title : "basic7",
         id : 7,
         currentLevel : 1,
         maxLevel : 3,
