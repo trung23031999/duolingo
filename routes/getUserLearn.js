@@ -11,11 +11,14 @@ router.post('/', verify, async(req,res)=>{
     var score = req.body.score;
     var title = req.body.title;
     var level = req.body.level;
-    var id = Number(title.charAt(title.length-1)) * level;
-    console.log(id);
-    var currentUser = await UserScore.find({username : username, "allScore.id" : id});
-    console.log(currentUser);
-    var diffScore = score - currentUser[0].allScore[id-1].score;
+    if (score){
+        var id = Number(title.charAt(title.length-1)) * level;
+        console.log(id);
+        var currentUser = await UserScore.find({username : username, "allScore.id" : id});
+        console.log(currentUser);
+        var diffScore = score - currentUser[0].allScore[id-1].score;
+    }
+    
     if (diffScore > 0){
         console.log("pass");
         var title = req.body.title;
@@ -36,7 +39,7 @@ router.post('/', verify, async(req,res)=>{
     var scoreboard = await UserScore.find().sort({totalScore : -1}).limit(5);
     res.json({
         // updateScore : resultScore,
-        // learn : finalUserScore,
+        learn : result,
         board : scoreboard
     });
 });

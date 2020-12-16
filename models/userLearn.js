@@ -7,7 +7,7 @@ const fix1 = [
         id : 1,
         currentLevel : 1,
         maxLevel : 3,
-        image : "",
+        image : "https://drive.google.com/file/d/1Z3GLUGkDqtBoti4DgJXCdN_7kQJNB2o6/view",
         row : 1,
     },
     {
@@ -16,7 +16,7 @@ const fix1 = [
         id : 2,
         currentLevel : 1,
         maxLevel : 3,
-        image : "",
+        image : "https://drive.google.com/file/d/1Z3GLUGkDqtBoti4DgJXCdN_7kQJNB2o6/view",
         row : 1,
     },
     {
@@ -25,7 +25,7 @@ const fix1 = [
         id : 3,
         currentLevel : 1,
         maxLevel : 3,
-        image : "",
+        image : "https://drive.google.com/file/d/1C0Yy71lBE-H4fv6-g0Of5tEbDy7z7eiD/view",
         row : 2,
     },
     {
@@ -34,7 +34,7 @@ const fix1 = [
         id : 4,
         currentLevel : 1,
         maxLevel : 3,
-        image : "",
+        image : "https://drive.google.com/file/d/1Z3GLUGkDqtBoti4DgJXCdN_7kQJNB2o6/view",
         row : 3,
     },
     {
@@ -43,7 +43,7 @@ const fix1 = [
         id : 5,
         currentLevel : 1,
         maxLevel : 3,
-        image : "",
+        image : "https://drive.google.com/file/d/1C0Yy71lBE-H4fv6-g0Of5tEbDy7z7eiD/view",
         row : 3,
     },
     {
@@ -52,7 +52,7 @@ const fix1 = [
         id : 6,
         currentLevel : 1,
         maxLevel : 3,
-        image : "",
+        image : "https://drive.google.com/file/d/15jvW-7ysS3WLN92FWzJfXui6y7GHUIxq/view",
         row : 4,
     },
     {
@@ -61,7 +61,7 @@ const fix1 = [
         id : 7,
         currentLevel : 1,
         maxLevel : 3,
-        image : "",
+        image : "https://drive.google.com/file/d/15jvW-7ysS3WLN92FWzJfXui6y7GHUIxq/view",
         row : 5,
     }
 ]
